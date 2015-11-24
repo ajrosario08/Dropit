@@ -12,17 +12,9 @@ class DropitViewContoller: UIViewController {
 
     @IBOutlet weak var gameView: UIView!
     
-    let gravity = UIGravityBehavior()
-    
     lazy var animator: UIDynamicAnimator = {
       let lazilyCreatedDynamicAnimator =  UIDynamicAnimator(referenceView: self.gameView)
         return lazilyCreatedDynamicAnimator
-    }()
-    
-    lazy var collider: UICollisionBehavior = {
-       let lazilyCreatedCollider = UICollisionBehavior()
-        lazilyCreatedCollider.translatesReferenceBoundsIntoBoundary = true
-        return lazilyCreatedCollider
     }()
     
     override func viewDidLoad() {

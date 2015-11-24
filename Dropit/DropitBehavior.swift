@@ -29,5 +29,13 @@ class DropitBehavior: UIDynamicBehavior {
         gravity.addItem(drop)
         collider.addItem(drop)
     }
+    
+    func removeDrop(drop: UIView) {
+        gravity.removeItem(drop)
+        collider.removeItem(drop)
+        drop.removeFromSuperview()
+    }
+        
+    
 
 }

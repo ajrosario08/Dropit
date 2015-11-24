@@ -12,6 +12,18 @@ class DropitViewContoller: UIViewController {
 
     @IBOutlet weak var gameView: UIView!
     
+    let gravity = UIGravityBehavior()
+    
+    lazy var animator: UIDynamicAnimator = {
+      let lazilyCreatedDynamicAnimator =  UIDynamicAnimator(referenceView: self.gameView)
+        return lazilyCreatedDynamicAnimator
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        animator.addBehavior(gravity)
+    }
+    
     var dropsPerRow = 10
     
     var dropSize: CGSize {
@@ -31,6 +43,8 @@ class DropitViewContoller: UIViewController {
         dropView.backgroundColor = UIColor.random
         
         gameView.addSubview(dropView)
+        
+        gravity.addItem(dropView)
     }
     
 }

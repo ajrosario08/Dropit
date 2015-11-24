@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dropit View Contoller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dropit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DropitViewContoller" customModule="Dropit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,12 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUi-99-9Ng">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="605"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FKO-2k-8SX" appends="YES" id="3ho-eY-a3A"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="JUi-99-9Ng" secondAttribute="bottom" constant="-5" id="4F4-pZ-r41"/>
+                            <constraint firstItem="JUi-99-9Ng" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HEj-1e-Qeb"/>
+                            <constraint firstAttribute="trailing" secondItem="JUi-99-9Ng" secondAttribute="trailing" id="bAe-iy-zrO"/>
+                            <constraint firstItem="JUi-99-9Ng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kRT-3h-Ooi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="JUi-99-9Ng" id="wrT-Aw-oCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FKO-2k-8SX">
+                    <connections>
+                        <action selector="drop:" destination="BYZ-38-t0r" id="fdF-gd-E3M"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="600" y="377"/>
         </scene>
     </scenes>
 </document>

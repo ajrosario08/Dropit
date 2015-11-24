@@ -13,6 +13,7 @@
 		923F1CB21C05114D006DF1D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923F1CB01C05114D006DF1D7 /* LaunchScreen.storyboard */; };
 		923F1CBD1C05114D006DF1D7 /* DropitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F1CBC1C05114D006DF1D7 /* DropitTests.swift */; };
 		923F1CC81C05114D006DF1D7 /* DropitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F1CC71C05114D006DF1D7 /* DropitUITests.swift */; };
+		923F1CD61C0518F2006DF1D7 /* DropitViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F1CD51C0518F2006DF1D7 /* DropitViewContoller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		923F1CC31C05114D006DF1D7 /* DropitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		923F1CC71C05114D006DF1D7 /* DropitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropitUITests.swift; sourceTree = "<group>"; };
 		923F1CC91C05114D006DF1D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923F1CD51C0518F2006DF1D7 /* DropitViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitViewContoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				923F1CA71C05114D006DF1D7 /* AppDelegate.swift */,
 				923F1CAB1C05114D006DF1D7 /* Main.storyboard */,
+				923F1CD51C0518F2006DF1D7 /* DropitViewContoller.swift */,
 				923F1CAE1C05114D006DF1D7 /* Assets.xcassets */,
 				923F1CB01C05114D006DF1D7 /* LaunchScreen.storyboard */,
 				923F1CB31C05114D006DF1D7 /* Info.plist */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923F1CA81C05114D006DF1D7 /* AppDelegate.swift in Sources */,
+				923F1CD61C0518F2006DF1D7 /* DropitViewContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

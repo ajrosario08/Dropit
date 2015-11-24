@@ -17,4 +17,17 @@ class DropitBehavior: UIDynamicBehavior {
         lazilyCreatedCollider.translatesReferenceBoundsIntoBoundary = true
         return lazilyCreatedCollider
     }()
+    
+    override init() {
+        super.init()
+        addChildBehavior(gravity)
+        addChildBehavior(collider)
+    }
+    
+    func addDrop(drop: UIView) {
+        dynamicAnimator?.referenceView?.addSubview(drop)
+        gravity.addItem(drop)
+        collider.addItem(drop)
+    }
+
 }
